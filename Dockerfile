@@ -60,6 +60,8 @@ USER root
 # Ensure the vendor directory exists and set permissions
 RUN chmod 777 -R /var/www/html
 
+RUN chmod 777 -R /var/www/html/vendor
+
 # Ensure proper permissions for the storage and bootstrap cache directories
 #RUN chmod -R 777 storage bootstrap/cache
 

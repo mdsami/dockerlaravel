@@ -8,35 +8,10 @@
 </p>
 
 
-## AWS Elastic Container Service — A highly available and high performance container orchestration service. It allows you to run, scale and secure docker containers in AWS.
 
-### Let’s try to deploy our Laravel application to ECS. you will need:
+### Let’s try to deploy our Laravel application to Docker. you will need:
 
-- Docker images of our app(Nginx, app , Mysql)
-- ECS Cluster
-- ECS Task Definition
-- ECS Service
-- Elastic Container Repository
-- Application Load Balancer
-
-
-## VPC
-
-![Overview](https://github.com/mdsami/laravel-ecs-poridhi/blob/main/vpc.png)
-
-
-### Create a Cluster of type EC2 Linux + Networking . Choose instance type as per your wish ( i have chosen t2.micro) and number of instances to be launch in the cluster
-
-
-
-![Overview](https://github.com/mdsami/laravel-ecs-poridhi/blob/main/cluster.png)
-
-## Run  with Docker 
-
-```bash
-sudo chmod 755 docker/entrypoint.sh
-
-```
+- Docker images of our app(Nginx, laravel app , Mysql)
 
 
 ## Docker-composer
@@ -50,7 +25,7 @@ docker-compose up -d --build
 
 ```bash
 
-localhost:8080
+localhost:8001
 
 ```
 

@@ -5,13 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Test extends Model
+class Task extends Model
 {
+    protected $table = 'Tasks';
     use HasFactory;
-
-    protected $fillable = [
-        'title',
-        'image',
-    ];
-
 }

@@ -1,21 +1,15 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ItemController;
+use App\Models\Task;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('welcome')->name('test.home');
+    return view('welcome');
 });
-Route::post('/test', [TestController::class, 'store'])->name('test.store');
-Route::get('/test', [TestController::class, 'index'])->name('test.index');
+
+Route::get('/dashboard', [ DashboardController::class, 'view' ]);
+
+Route::post('/item', [ ItemController::class, 'insert' ]);
+Route::delete('/item/{id}', [ ItemController::class, 'delete' ])->name('item.destroy');
